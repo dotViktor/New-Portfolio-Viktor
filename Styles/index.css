@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+}
+.funky {
+  font-family: "BebasNeueBold";
+  font-size: 200px;
+  color: #00ffff;
+  text-shadow: 6px -6px 0 black, 9px -9px yellow;
+  transition: 1s ease-in-out;
+}
+.funky:hover {
+  color: yellow;
+  text-shadow: -6px 6px 0 black, -9px 9px #00ffff;
+  transition: 1s ease-in-out;
+}
