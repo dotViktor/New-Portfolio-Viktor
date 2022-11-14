@@ -5,17 +5,28 @@
 body {
   background-color: black;
 }
+h1 {
+  padding: 20px;
+  font-size: 10ch;
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .funky {
   font-family: "BebasNeueBold";
-  font-size: 200px;
   color: #00ffff;
   text-shadow: 6px -6px 0 black, 9px -9px yellow;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
+  animation: funky-on-load 1s ease-in-out;
 }
 .funky:hover {
   color: yellow;
   text-shadow: -6px 6px 0 black, -9px 9px #00ffff;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 #particles {
   position: absolute;
@@ -24,4 +35,18 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+@keyframes funky-on-load {
+  0% {
+    color: #00ffff;
+    text-shadow: 6px -6px 0 black, 9px -9px yellow;
+  }
+  50% {
+    color: yellow;
+    text-shadow: -6px 6px 0 black, -9px 9px #00ffff;
+  }
+  100% {
+    color: #00ffff;
+    text-shadow: 6px -6px 0 black, 9px -9px yellow;
+  }
 }
